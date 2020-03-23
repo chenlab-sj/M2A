@@ -13,8 +13,6 @@ Methyl2Activity (M2A) is a deep-learning framework for predicting histone modifi
 |5_RunModel             | Using pre-generated input, get HM predictions for each unique promoter region                                      |
 
 ### Prerequisites
-What things you need to install the software and how to install them
-
 ```
 Linux Operating System
 Python 3.6.5 or greater
