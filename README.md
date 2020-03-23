@@ -141,7 +141,9 @@ python 5_getPredictions.py [FeatureFilePath] [ModelFilePath]
 
 ## File definitions of required input 
 #### PromoterDefinitions
-A flat file (provided as 2_Promoter_Definitions_hg19.txt), tab delimited containing fields:
+A tab delimited file containing the unique promoter-regions for either:
+* **hg19-based data: 2_Promoter_Definitions_hg19.txt, or**
+* **GRCh38-based data: 2_Promoter_Definitions_GRCh38.txt**
 
 |Column      | Description                                   |
 |------------|-----------------------------------------------|
