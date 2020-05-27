@@ -1,6 +1,6 @@
 # M2A
 
-MethylToActivity (M2A) is a machine learning framework using convolutional neural networks (CNN) to infer histone modification (HM) enrichment from whole genome bisulfite sequencing (WGBS). To date, both H3K27ac and H3K4me3 enrichment prediction from WGBS is supported, from a bed-like file format of M-values. Optionally, we also support transfer-learning where a user may have matching H3K27ac or H3K4me3 data with appropriate controls in addition to WGBS data.
+MethylationToActivity (M2A) is a machine learning framework using convolutional neural networks (CNN) to infer histone modification (HM) enrichment from whole genome bisulfite sequencing (WGBS). To date, both H3K27ac and H3K4me3 enrichment prediction from WGBS is supported, from a tab-delimited text file format of M-values. Optionally, we also support transfer-learning where a user may have matching H3K27ac or H3K4me3 data with appropriate controls in addition to WGBS data.
 
 
 ### M2A is comprised 5 parts, including transfer-learning:
