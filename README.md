@@ -169,4 +169,4 @@ A bed like file of genomic positions with corresponding M-values, tab delimited:
 
 ## Authors
 
-* **Justin Williams, Beisi Xu, Daniel Putnam, and Xiang Chen** 
+* **Justin Williams, Beisi Xu, Daniel Putnam, Andrew Thrasher, and Xiang Chen** 
