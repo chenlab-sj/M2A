@@ -33,7 +33,7 @@ for more details, please visit individual scripts
 ```
 ### Docker Image
 The Docker image encapsulates all of the libraries, dependencies, scripts, and static files to run the M2A pipeline.
-To operate on data files between your local file system and docker we mount a directory between the two.
+To operate on data files between your local file system and Docker, we mount a directory (or volume) between the two.
 In this case, the directory is hub. Docker by default operates as root and subsequent data generated will be owned by root.
 This assumes you have Docker currently running on your system. (https://docs.docker.com/get-docker/)
 
