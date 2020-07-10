@@ -37,7 +37,7 @@ To operate on data files between your local file system and Docker, we mount a d
 In this case, the directory is hub. Docker by default operates as root and subsequent data generated will be owned by root.
 This assumes you have Docker currently running on your system. (https://docs.docker.com/get-docker/)
 
-Below we show how to:
+Below we show using a Linux operating system how to:
 1) Build the image from scratch
 2) Download the image from Docker Hub
 3) Run the Docker image with output files owned by root user
