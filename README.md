@@ -34,8 +34,12 @@ for more details, please visit individual scripts
 ### Docker Image
 The Docker image encapsulates all of the libraries, dependencies, scripts, and static files to run the M2A pipeline.
 To operate on data files between your local file system and docker we mount a directory between the two.
-In this case, the directory is hub. Docker by default operates as root and subsequent DATA generated will be owned by root
-Below we show root ownership and the flags to change root to user owenership
+In this case, the directory is hub. Docker by default operates as root and subsequent data generated will be owned by root.
+Below we show how to:
+1) Build the image from scratch
+2) Download the image from Docker Hub
+3) Run the Docker image with output files owned by root user
+4) Run the Docker image with output files owned by user
 ```
 To build the Docker image ( if necessary):
   sudo docker image build -t xiangchenlab/m2a .
@@ -46,13 +50,13 @@ To download the Docker image ( recommended):
 To run the Docker image as Root User
   sudo docker run -v [HOST_PATH]:[DOCKER_PATH] -it xiangchenlab/m2a
 
-Example 1:
+Example:
   sudo docker run -v ~/M2A/hub/:/M2A/hub -it xiangchenlab/m2a
   
 To run the Docker image as UserName
   sudo docker run -v [HOST_PATH]:[DOCKER_PATH] --user "$(id -u):$(id -g)" -it xiangchenlab/m2a
 
-Example 2:
+Example:
   sudo docker run -v ~/M2A/hub/:/M2A/hub --user "$(id -u):$(id -g)" -it xiangchenlab/m2a
 ```
 ## 1_ResponseVariable
