@@ -40,13 +40,13 @@ To run the Docker image as Root User
   sudo docker run -v [HOST_PATH]:[DOCKER_PATH] -it m2a
 
 Example:
-  sudo docker run -v /home/dputnam/M2A/hub/:/M2A/hub -it m2a
+  sudo docker run -v ~/M2A/hub/:/M2A/hub -it m2a
   
 To run the Docker image as UserName
   sudo docker run -v [HOST_PATH]:[DOCKER_PATH] --user "$(id -u):$(id -g)" -it m2a
 
 Example:
-  sudo docker run -v /home/dputnam/M2A/hub/:/M2A/hub --user "$(id -u):$(id -g)" -it m2a
+  sudo docker run -v ~/M2A/hub/:/M2A/hub --user "$(id -u):$(id -g)" -it m2a
 ```
 
 
