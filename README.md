@@ -41,7 +41,7 @@ Below we show how to:
 1) Build the image from scratch
 2) Download the image from Docker Hub
 3) Run the Docker image with output files owned by root user
-4) Run the Docker image with output files owned by user\
+4) Run the Docker image with output files owned by user
 
 When the image is run, you will be lauched into a commandline shell ready to execute the pipeline below.
 The input files, should be placed in a folder in the mounted directory.
