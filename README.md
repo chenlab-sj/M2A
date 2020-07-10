@@ -31,6 +31,26 @@ the following non-standard python packages, available through pip3 install [pack
 10) scipy v1.3.1
 for more details, please visit individual scripts
 ```
+### Docker Image
+```
+To build the Docker image:
+  sudo docker image build -t m2a .
+    
+To run the Docker image as Root User
+  sudo docker run -v [HOST_PATH]:[DOCKER_PATH] -it m2a
+
+Example:
+  sudo docker run -v /home/dputnam/M2A/hub/:/M2A/hub -it m2a
+  
+To run the Docker image as UserName
+  sudo docker run -v [HOST_PATH]:[DOCKER_PATH] --user "$(id -u):$(id -g)" -it m2a
+
+Example:
+  sudo docker run -v /home/dputnam/M2A/hub/:/M2A/hub --user "$(id -u):$(id -g)" -it m2a
+```
+
+
+
 
 ## 1_ResponseVariable
 
