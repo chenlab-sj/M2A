@@ -34,19 +34,22 @@ for more details, please visit individual scripts
 ### Docker Image
 ```
 To build the Docker image:
-  sudo docker image build -t m2a .
+  sudo docker image build -t xiangchenlab/m2a .
+  
+To download the Docker image:
+  sudo docker pull xiangchenlab/m2a:latest 
     
 To run the Docker image as Root User
-  sudo docker run -v [HOST_PATH]:[DOCKER_PATH] -it m2a
+  sudo docker run -v [HOST_PATH]:[DOCKER_PATH] -it xiangchenlab/m2a
 
 Example:
   sudo docker run -v ~/M2A/hub/:/M2A/hub -it m2a
   
 To run the Docker image as UserName
-  sudo docker run -v [HOST_PATH]:[DOCKER_PATH] --user "$(id -u):$(id -g)" -it m2a
+  sudo docker run -v [HOST_PATH]:[DOCKER_PATH] --user "$(id -u):$(id -g)" -it xiangchenlab/m2a
 
 Example:
-  sudo docker run -v ~/M2A/hub/:/M2A/hub --user "$(id -u):$(id -g)" -it m2a
+  sudo docker run -v ~/M2A/hub/:/M2A/hub --user "$(id -u):$(id -g)" -it xiangchenlab/m2a
 ```
 
 
