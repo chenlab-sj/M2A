@@ -32,23 +32,27 @@ the following non-standard python packages, available through pip3 install [pack
 for more details, please visit individual scripts
 ```
 ### Docker Image
+The Docker image encapsulates all of the libraries, dependencies, scripts, and static files to run the M2A pipeline.
+To operate on data files between your local file system and docker we mount a directory between the two.
+In this case, the directory is hub. Docker by default operates as root and subsequent DATA generated will be owned by root
+Below we show root ownership and the flags to change root to user owenership
 ```
-To build the Docker image:
+To build the Docker image ( if necessary):
   sudo docker image build -t xiangchenlab/m2a .
   
-To download the Docker image:
+To download the Docker image ( recommended):
   sudo docker pull xiangchenlab/m2a:latest 
     
 To run the Docker image as Root User
   sudo docker run -v [HOST_PATH]:[DOCKER_PATH] -it xiangchenlab/m2a
 
-Example:
+Example 1:
   sudo docker run -v ~/M2A/hub/:/M2A/hub -it xiangchenlab/m2a
   
 To run the Docker image as UserName
   sudo docker run -v [HOST_PATH]:[DOCKER_PATH] --user "$(id -u):$(id -g)" -it xiangchenlab/m2a
 
-Example:
+Example 2:
   sudo docker run -v ~/M2A/hub/:/M2A/hub --user "$(id -u):$(id -g)" -it xiangchenlab/m2a
 ```
 ## 1_ResponseVariable
