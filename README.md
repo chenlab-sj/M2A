@@ -43,7 +43,7 @@ To run the Docker image as Root User
   sudo docker run -v [HOST_PATH]:[DOCKER_PATH] -it xiangchenlab/m2a
 
 Example:
-  sudo docker run -v ~/M2A/hub/:/M2A/hub -it m2a
+  sudo docker run -v ~/M2A/hub/:/M2A/hub -it xiangchenlab/m2a
   
 To run the Docker image as UserName
   sudo docker run -v [HOST_PATH]:[DOCKER_PATH] --user "$(id -u):$(id -g)" -it xiangchenlab/m2a
@@ -51,10 +51,6 @@ To run the Docker image as UserName
 Example:
   sudo docker run -v ~/M2A/hub/:/M2A/hub --user "$(id -u):$(id -g)" -it xiangchenlab/m2a
 ```
-
-
-
-
 ## 1_ResponseVariable
 
 Calculate the response variable (histone enrichment) for each promoter region, for transfer learning.
