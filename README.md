@@ -29,6 +29,7 @@ the following non-standard python packages, available through pip3 install [pack
 8) keras v2.2.4
 9) tensorflow v1.10.1
 10) scipy v1.3.1
+11) matplotlib v3.3.0
 for more details, please visit individual scripts
 ```
 ### Docker Image
