@@ -11,6 +11,7 @@ os
 pprint
 pandas
 numpy
+matplotlib
 
 Purpose:
 Perform transfer learning on a single sample, updating a current model
@@ -84,7 +85,7 @@ def getCallBacks():
 def parseInput(FeatureFilePath):
 	SampleDataHDF = h5py.File(FeatureFilePath, mode="r")
 	# train data
-	TrainData = np.array(SampleDataHDF["FeatureInput"])
+	TrainData = np.array(SampleDataHDF["FeatureInput"])[:,:,:,[0,1,3]]
 	# respvar
 	TrainRespVar = np.array(SampleDataHDF["log2_ChipDivInput"])
 	# shuffle data
