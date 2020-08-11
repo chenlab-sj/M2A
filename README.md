@@ -80,7 +80,7 @@ model:
 | Promoter region definition file (*provided, or user defined*)     | File describing promoter regions to be predicted. (non-standard format, see below)|
 | Model weights (*provided, or user defined from transfer*)         | hdf5 model weights for either H3K27ac prediction OR H3K4me3 prediction            |
 
-##### Promoter region definition file 
+#### Promoter region definition file 
 A tab delimited file containing the unique promoter-regions for either:
 * **hg19-based data: 2_Promoter_Definitions_hg19.txt, or**
 * **GRCh38-based data: 2_Promoter_Definitions_GRCh38.txt**
@@ -97,7 +97,7 @@ A tab delimited file containing the unique promoter-regions for either:
 |RStart      | TSS - 1000bp                                  |
 |REnd        | TSS + 1000bp                                  |
 
-##### WGBS data file
+#### WGBS data file
 A bed-like file of genomic positions with corresponding M-values, tab delimited:
 
 |Column      | Description                                                            |
