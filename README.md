@@ -104,7 +104,7 @@ A bed-like file of genomic positions with corresponding M-values, tab delimited:
 |------------|------------------------------------------------------------------------|
 |chrom       | chromosome ID, e.g. 1,2,3 ...22                                        |
 |pos         | position of 5' cytosine of a CpG on the positive strand                |      
-|mval        | caluclated mvalue of a given CpG, typically M-value=log2(Beta/1-Beta)  |
+|mval        | calculated mvalue of a given CpG, typically M-value=log2(Beta/1-Beta)  |
 
 
 ### Run M2A with transfer learning 
@@ -139,7 +139,7 @@ $ docker build --tag stjude/m2a:0.0.1 .
 
 ## Evaluate test data results
 
-Today, the M2A pipeline does not produce an interactive visualization. If M2A with Transfer was run, the easiest measurment of training prediction accuracy would be caluclating the Pearson's R<sup>2</sup>, or root mean square error (RMSE) between the measured and M2A predicted values. Furthermore, comparisons of sample-sample consistency with the same/similar cancer-type (as determiend by Pearson's R<sup>2</sup>) is a good start for a contextual understanding of the predictions produced by M2A.
+Today, the M2A pipeline does not produce an interactive visualization. If M2A with Transfer was run, the easiest measurement of training prediction accuracy would be calculating the Pearson's R<sup>2</sup>, or root mean square error (RMSE) between the measured and M2A predicted values. Furthermore, comparisons of sample-sample consistency with the same/similar cancer-type (as determined by Pearson's R<sup>2</sup>) is a good start for a contextual understanding of the predictions produced by M2A.
 
 ## St. Jude Cloud
 
