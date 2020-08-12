@@ -1,0 +1,129 @@
+{
+  "openSource": false,
+  "developers": [ "user-athrashe" ],
+  "authorizedUsers": [
+    "user-athrashe",
+    "org-stjude_cloud_app_runners",
+    "org-stjude_cloud"
+  ],  
+  "name": "stjude_m2a",
+  "title": "M2A: Methylation to activity",
+  "summary": "Inferring Histone States and Gene Expression from DNA Methylation ",
+  "dxapi": "1.0.0",
+  "version": "0.0.1",
+  "inputSpec": [
+    {
+      "name": "curatedSites",
+      "class": "file",
+      "optional": false,
+      "patterns": [
+        "*"
+      ],
+      "help": ""
+    },
+    {
+      "name": "chipBigwig",
+      "label": "ChIP-seq bigwig coverage track",
+      "class": "file",
+      "optional": false,
+      "patterns": [
+        "*.bw"
+      ],
+      "help": ""
+    },
+    {
+      "name": "inputBigwig",
+      "label": "Input coverage track",
+      "class": "file",
+      "optional": false,
+      "patterns": [
+        "*.bw"
+      ],
+      "help": ""
+    },
+    {
+      "name": "ref_name",
+      "label": "Genome",
+      "class": "string",
+      "choices": ["GRCh37-lite", "GRCh38", "Custom, specified as input"],
+      "optional": false,
+      "default": "GRCh37-lite",
+      "help": ""
+    },
+    {
+      "name": "promoterDefinitions",
+      "label": "Promoter definitions",
+      "class": "file",
+      "optional": true,
+      "patterns": [
+        "*" 
+      ],
+      "help": "Support for using genomes GRCh37-lite or GRCh38 is built-in.  See the Genome parameter.  If you need to use a different genome, then set Genome to Custom and specify the custom promoter defintions here."
+    },
+    {
+      "name": "model",
+      "label": "HDF5 format model",
+      "class": "file",
+      "optional": false,
+      "patterns": [
+        "*.h5"
+      ],
+      "help": ""
+    }
+  ],
+  "outputSpec": [
+    {
+      "name": "features",
+      "class": "file",
+      "patterns": [
+        "*"
+      ],
+      "help": ""
+    },
+     {
+      "name": "features_h5",
+      "class": "file",
+      "patterns": [
+        "*"
+      ],
+      "help": ""
+    },
+    {
+      "name": "predictions",
+      "class": "file",
+      "patterns": [
+        "*"
+      ],
+      "help": ""
+    }
+  ],
+  "runSpec": {
+    "timeoutPolicy": {
+      "*": {
+        "hours": 12
+      }
+    },
+    "interpreter": "bash",
+    "release": "16.04",
+    "distribution": "Ubuntu",
+    "file": "src/M2A.sh",
+    "execDepends": [
+    ]
+  },
+  "billTo": "org-stjude_cloud",
+  "access": {
+    "allProjects": "VIEW",
+    "network": [
+      "*"
+    ]
+  },
+  "regionalOptions": {
+    "azure:westus": {
+      "systemRequirements": {
+        "*": {
+          "instanceType": "azure:mem1_ssd1_x16"
+        }
+      }
+    }
+  }
+}
