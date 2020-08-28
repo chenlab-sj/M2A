@@ -19,14 +19,14 @@ library(My.stepwise)
 library(survival)
 library(dplyr)
 
-Variables = c('TP53_mutation',
+Variables = c('TP53_mutation', 'STAG2_mutation',
 			'TEX40_ENST00000328404.6', 'TNS1_ENST00000446903.1',
 			'RET_ENST00000479913.1', 'CASZ1_ENST00000496432.2',
 			'SLC27A6_ENST00000508645.1', 'CALCB')
 
 DF = read.table("StepwiseModel_Input.txt", header=TRUE, sep="\t")
 SurvObj <- Surv(time=DF$OS..months., event=DF$Patient.Status)
-Formula = as.formula(paste("SurvObj ~", paste(Variables[1:7],collapse=" + ")))
+Formula = as.formula(paste("SurvObj ~", paste(Variables[1:8],collapse=" + ")))
 FullCoxphModel <- coxph(Formula, data=DF)
 # 
 StepResults <- step(FullCoxphModel,direction="backward")
