@@ -145,8 +145,7 @@ Today, the M2A pipeline does not produce an interactive visualization. If M2A wi
 
 ## St. Jude Cloud
 
-To run M2A in St. Jude Cloud, please follow the directions at https://university.stjude.cloud/docs/genomics-platform/workflow-guides/methylation-to-activity/![image](https://user-images.githubusercontent.com/54188192/143135230-d06dfe4b-46ec-4fca-89ce-bc2a96859d01.png)
-
+To run M2A in St. Jude Cloud, please follow the directions at https://university.stjude.cloud/docs/genomics-platform/workflow-guides/methylation-to-activity/
 
 ## Availability
 
